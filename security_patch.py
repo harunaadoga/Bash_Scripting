@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #automate security patch on Ubuntu
 import subprocess
 
