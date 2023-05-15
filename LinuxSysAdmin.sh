@@ -11,7 +11,7 @@ then
         then
                 echo "The username $username already exists."
         else
-                sudo usersadd -m -s /bin/bash "$username"
+                sudo adduser -m -s /bin/bash "$username"
 		if [[ $? -eq 0 ]]
 		then 
 			echo "The user $username was added successfully."
@@ -35,7 +35,7 @@ then
 elif [[ $REPLY -eq 4 ]]
 then
 	read -p "Enter the program to install:" app
-	sudo apt update && sudo sudo apt install $app
+	sudo dnf update && sudo dnf install $app
 
 elif [[ $REPLY -eq 5 ]]
 then
